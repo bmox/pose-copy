@@ -138,10 +138,10 @@ if __name__ == "__main__":
             rename_file_name=main(flip_the_video)
             st.markdown(f"## pose copy complete")
             st.markdown(get_binary_file_downloader_html(f'{rename_file_name}', 'Video'), unsafe_allow_html=True)
-            for i in os.listdir("./temp/"):
-                try:
-                    os.remove(os.remove(f"./temp/{i}"))
-                except:
-                    pass
+#             for i in os.listdir("./temp/"):
+#                 try:
+#                     os.remove(os.remove(f"./temp/{i}"))
+#                 except:
+#                     pass
         else:
             st.error("Export folder not exist.")
