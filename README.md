@@ -5,7 +5,7 @@ https://pose-copy.herokuapp.com/
   <img src="https://github.com/bmox/pose-copy/blob/main/video.gif" alt="animated" />
 </p>
 <br>
-This web app only run on localhost <br>
+This app.py  only run on localhost <br>
 Python version >=3.7 <br>
 
 ## step 1
