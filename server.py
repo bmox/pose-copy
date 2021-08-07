@@ -25,17 +25,17 @@ try:
     os.mkdir("temp")
 except:
     pass
-for i in os.listdir("./temp/"):
+for i in os.listdir("/temp/"):
     try:
-        os.remove(os.remove(f"./temp/{i}"))
+        os.remove(os.remove(f"/temp/{i}"))
     except:
         pass
 input_file_path = ""
 uploaded_file = st.file_uploader("Upload Files", type=["mp4"])
 if uploaded_file is not None:
-    with open(f"./temp/{uploaded_file.name}", "wb") as f:
+    with open(f"/temp/{uploaded_file.name}", "wb") as f:
         f.write(uploaded_file.getbuffer())
-    input_file_path = f"./temp/{uploaded_file.name}"
+    input_file_path = f"/temp/{uploaded_file.name}"
 
 
 # folder_path = st.text_input("Paste the folder location where you want to save:")
@@ -51,10 +51,10 @@ def main(flip_the_video):
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     size = (width, height)
-    file_name = "./temp/output.mp4"
+    file_name = "/temp/output.mp4"
     export_file_path = "./"
 
-    var1 = os.system(f'ffmpeg -i {input_file} "./temp/audio.mp3"')
+    var1 = os.system(f'ffmpeg -i {input_file} "/temp/audio.mp3"')
 
     if var1 == 0:
         print("audio extracted")
@@ -117,8 +117,8 @@ def main(flip_the_video):
 
 
 
-    aduio_file = "./temp/audio.mp3"
-    blur_video = "./temp/blur.mp4"
+    aduio_file = "/temp/audio.mp3"
+    blur_video = "/temp/blur.mp4"
     os.system(
         f"ffmpeg -i {file_name} -i {aduio_file} -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 {blur_video}"
     )
@@ -138,9 +138,9 @@ if __name__ == "__main__":
             rename_file_name=main(flip_the_video)
             st.markdown(f"## pose copy complete")
             st.markdown(get_binary_file_downloader_html(f'{rename_file_name}', 'Video'), unsafe_allow_html=True)
-            for i in os.listdir("./temp/"):
+            for i in os.listdir("/temp/"):
                 try:
-                    os.remove(os.remove(f"./temp/{i}"))
+                    os.remove(os.remove(f"/temp/{i}"))
                 except:
                     pass
         else:
