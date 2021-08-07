@@ -1,4 +1,6 @@
 # pose copy
+https://share.streamlit.io/bmox/pose-copy/main/server.py <br>
+https://pose-copy.herokuapp.com/
 <p align="center">
   <img src="https://github.com/bmox/pose-copy/blob/main/video.gif" alt="animated" />
 </p>
