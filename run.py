@@ -1,2 +1,2 @@
 import os
-os.system("streamlit run app.py --server.maxUploadSize=5000")
+os.system("streamlit run holistic.py --server.maxUploadSize=5000")
