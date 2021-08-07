@@ -160,7 +160,7 @@ def main(flip_the_video):
     shutil.copy(blur_video, rename_file_name)
 
 if __name__ == "__main__":
-    flip_the_video = st.selectbox("Horizontally flip video ",("Yes","No"))
+    flip_the_video = st.selectbox("Horizontally flip video ",("No","Yes"))
 
     if st.button("Start"):
         if flag:
