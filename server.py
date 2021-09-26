@@ -110,8 +110,8 @@ def main(flip_the_video):
         if img is None:
                 break
         video_output.write(img_blank) 
-        frame = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        FRAME_WINDOW.image(frame) 
+        # frame = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        # FRAME_WINDOW.image(frame) 
     video_output.release()
     cap.release()
 
